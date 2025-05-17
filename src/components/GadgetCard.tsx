@@ -16,6 +16,7 @@ export interface Gadget {
   image: string;
   rating: number;
   category: string;
+  dealUrl?: string;
 }
 
 interface GadgetCardProps {
@@ -36,6 +37,31 @@ const GadgetCard = ({ gadget }: GadgetCardProps) => {
       description: `You'll be notified when ${gadget.name} drops below ₹${price}`,
     });
     setIsAlertModalOpen(false);
+  };
+
+  const handleViewDeal = () => {
+    if (gadget.dealUrl) {
+      // Open in a new tab
+      window.open(gadget.dealUrl, "_blank", "noopener,noreferrer");
+    } else {
+      // Default behavior for platforms without specific URLs
+      const platformUrls = {
+        "Amazon": "https://amazon.in",
+        "Flipkart": "https://flipkart.com",
+        "Croma": "https://croma.com",
+        "Reliance Digital": "https://reliancedigital.in",
+        "Myntra": "https://myntra.com",
+        "Tata Cliq": "https://tatacliq.com",
+        "Nykaa": "https://nykaa.com",
+      };
+      
+      const baseUrl = platformUrls[gadget.platform as keyof typeof platformUrls] || "https://google.com/search";
+      const searchUrl = baseUrl === "https://google.com/search" 
+        ? `${baseUrl}?q=${encodeURIComponent(gadget.name)}` 
+        : `${baseUrl}/search?q=${encodeURIComponent(gadget.name)}`;
+      
+      window.open(searchUrl, "_blank", "noopener,noreferrer");
+    }
   };
 
   const platformColor = (platform: string) => {
@@ -103,7 +129,10 @@ const GadgetCard = ({ gadget }: GadgetCardProps) => {
                 >
                   <Bell className="h-4 w-4" />
                 </Button>
-                <Button className="bg-prophet-orange hover:bg-orange-600">
+                <Button 
+                  className="bg-prophet-orange hover:bg-orange-600"
+                  onClick={handleViewDeal}
+                >
                   <ExternalLink className="h-4 w-4 mr-2" />
                   View Deal
                 </Button>

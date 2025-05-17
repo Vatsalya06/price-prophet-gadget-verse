@@ -4,6 +4,16 @@ import { Bell, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
+// Logo component
+const Logo = () => (
+  <div className="flex items-center space-x-2">
+    <div className="h-8 w-8 rounded-full bg-gradient-to-r from-prophet-blue to-prophet-orange flex items-center justify-center text-white font-bold text-xl">P</div>
+    <span className="text-2xl font-bold bg-gradient-to-r from-prophet-blue to-prophet-orange bg-clip-text text-transparent">
+      Price Prophet
+    </span>
+  </div>
+);
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -11,10 +21,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto sm:px-6">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-prophet-blue to-prophet-orange bg-clip-text text-transparent">
-              Price Prophet
-            </span>
+          <Link to="/" className="flex items-center">
+            <Logo />
           </Link>
         </div>
         

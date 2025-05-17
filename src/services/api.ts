@@ -31,3 +31,13 @@ export const setPriceAlert = async (productId: number, targetPrice: number) => {
     }, 500);
   });
 };
+
+// Function to fetch a specific product by ID
+export const fetchProductById = async (id: number): Promise<Gadget | null> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const product = mockGadgets.find(gadget => gadget.id === id);
+      resolve(product || null);
+    }, 300);
+  });
+};

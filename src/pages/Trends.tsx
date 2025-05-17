@@ -25,14 +25,17 @@ const Trends = () => {
     const loadData = async () => {
       setIsLoading(true);
       try {
-        const [gadgetsData, trendsData] = await Promise.all([
+        const [gadgetsData, trendsResult] = await Promise.all([
           fetchGadgets(),
           fetchTrends()
         ]);
         
         setGadgets(gadgetsData);
         setFilteredGadgets(gadgetsData);
-        setTrendsData(trendsData);
+        
+        // Ensure trendsResult is properly typed
+        const typedTrendsData = trendsResult as PriceHistory[];
+        setTrendsData(typedTrendsData);
         
         // Select the first gadget by default
         if (gadgetsData.length > 0) {
@@ -195,6 +198,17 @@ const Trends = () => {
       </div>
     </div>
   );
+  
+  function getSelectedGadgetTrend() {
+    if (!selectedGadget || !trendsData.length) return { productName: "", data: [] };
+    
+    const trend = trendsData.find(t => t.productId === selectedGadget.id);
+    return trend || { productName: selectedGadget.name, data: [] };
+  }
+
+  function handleGadgetSelect(gadget: Gadget) {
+    setSelectedGadget(gadget);
+  }
 };
 
 export default Trends;
