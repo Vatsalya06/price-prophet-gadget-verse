@@ -8,6 +8,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
 import Trends from "@/pages/Trends";
+import AlertsPage from "@/pages/Alerts";
+import Compare from "@/pages/Compare";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,7 +26,8 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/trends" element={<Trends />} />
-              <Route path="/alerts" element={<Home />} />
+              <Route path="/alerts" element={<AlertsPage />} />
+              <Route path="/compare" element={<Compare />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
