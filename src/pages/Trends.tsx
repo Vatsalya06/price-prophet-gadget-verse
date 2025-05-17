@@ -198,17 +198,6 @@ const Trends = () => {
       </div>
     </div>
   );
-  
-  function getSelectedGadgetTrend() {
-    if (!selectedGadget || !trendsData.length) return { productName: "", data: [] };
-    
-    const trend = trendsData.find(t => t.productId === selectedGadget.id);
-    return trend || { productName: selectedGadget.name, data: [] };
-  }
-
-  function handleGadgetSelect(gadget: Gadget) {
-    setSelectedGadget(gadget);
-  }
 };
 
 export default Trends;
