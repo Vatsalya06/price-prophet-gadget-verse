@@ -5,28 +5,28 @@ const gadgetImages = [
   "https://images.unsplash.com/photo-1606041008023-472dfb5b530f?q=80&w=2788&auto=format&fit=crop", // iPhone 15 Pro
   "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?q=80&w=3540&auto=format&fit=crop", // Samsung Galaxy S24
   "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2626&auto=format&fit=crop", // MacBook Pro
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=6000&auto=format&fit=crop", // Dell XPS - Updated to a better image
+  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop", // Dell XPS - Updated to a more appropriate image
   "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=2935&auto=format&fit=crop", // iPad Pro
   "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=2788&auto=format&fit=crop", // Sony Headphones
   "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=3472&auto=format&fit=crop", // Apple Watch
   "https://images.unsplash.com/photo-1678911820864-e2c567c655d7?q=80&w=3387&auto=format&fit=crop", // Vivo Phone
-  "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=2831&auto=format&fit=crop", // Smartwatch
-  "https://images.unsplash.com/photo-1564424224827-cd24b8915874?q=80&w=2289&auto=format&fit=crop", // Wireless earbuds
-  "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2865&auto=format&fit=crop", // OPPO Phone
-  "https://images.unsplash.com/photo-1609692814858-f7cd2f0afa4f?q=80&w=2787&auto=format&fit=crop"  // Xiaomi Tablet
+  "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=2027&auto=format&fit=crop", // Smartwatch - Updated
+  "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1932&auto=format&fit=crop", // Wireless earbuds - Updated
+  "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=2027&auto=format&fit=crop", // OPPO Phone - Updated
+  "https://images.unsplash.com/photo-1632570381156-0547be9239ce?q=80&w=2087&auto=format&fit=crop"  // Xiaomi Tablet - Updated
 ];
 
 // Sample platforms
 const platforms = ["Amazon", "Flipkart", "Croma", "Reliance Digital", "Myntra", "Tata Cliq"];
 
-// Sample deal URLs
+// Updated deal URLs with valid links
 const sampleDealUrls = {
-  "Amazon": "https://www.amazon.in/dp/B071HWTHBW",
-  "Flipkart": "https://www.flipkart.com/product/p/itme",
-  "Croma": "https://www.croma.com/product/p/1234",
-  "Reliance Digital": "https://www.reliancedigital.in/product/p/4321",
-  "Myntra": "https://www.myntra.com/product/p/5678",
-  "Tata Cliq": "https://www.tatacliq.com/product/p/8765"
+  "Amazon": "https://www.amazon.in/",
+  "Flipkart": "https://www.flipkart.com/",
+  "Croma": "https://www.croma.com/",
+  "Reliance Digital": "https://www.reliancedigital.in/",
+  "Myntra": "https://www.myntra.com/",
+  "Tata Cliq": "https://www.tatacliq.com/"
 };
 
 // Sample gadget data with realistic current prices (May 2025)
@@ -39,7 +39,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[0],
     rating: 4.7,
-    category: "Smartphones"
+    category: "Smartphones",
+    dealUrl: sampleDealUrls["Amazon"] + "Apple-iPhone-15-Pro-256GB/dp/B0CHX2F5QT"
   },
   {
     id: 2,
@@ -49,7 +50,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Flipkart",
     image: gadgetImages[0],
     rating: 4.6,
-    category: "Smartphones"
+    category: "Smartphones",
+    dealUrl: sampleDealUrls["Flipkart"] + "apple-iphone-15-pro-blue-256-gb/p/itm6ac88022762be"
   },
   {
     id: 3,
@@ -59,7 +61,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[1],
     rating: 4.5,
-    category: "Smartphones"
+    category: "Smartphones",
+    dealUrl: sampleDealUrls["Amazon"] + "Samsung-Galaxy-S24-Ultra-Titanium/dp/B0CT14RYRH"
   },
   {
     id: 4,
@@ -69,7 +72,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Croma",
     image: gadgetImages[1],
     rating: 4.4,
-    category: "Smartphones"
+    category: "Smartphones",
+    dealUrl: sampleDealUrls["Croma"] + "samsung-galaxy-s24-ultra-5g-512gb-rom-12gb-ram-sm-s928-titanium-black/p/268377"
   },
   {
     id: 5,
@@ -79,7 +83,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[2],
     rating: 4.9,
-    category: "Laptops"
+    category: "Laptops",
+    dealUrl: sampleDealUrls["Amazon"] + "2023-Apple-MacBook-14-inch-12%E2%80%91core/dp/B0CM5L86JH"
   },
   {
     id: 6,
@@ -89,7 +94,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Reliance Digital",
     image: gadgetImages[2],
     rating: 4.8,
-    category: "Laptops"
+    category: "Laptops",
+    dealUrl: sampleDealUrls["Reliance Digital"] + "apple-macbook-pro-m3-pro-chip-14-inch-liquid-retina-xdr-display-16-gb-ram-512-gb-ssd-macos-sonoma-space-black-/p/493177730"
   },
   {
     id: 7,
@@ -99,7 +105,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[3],
     rating: 4.6,
-    category: "Laptops"
+    category: "Laptops",
+    dealUrl: sampleDealUrls["Amazon"] + "Dell-XPS-9530-i9-13900H-Graphics/dp/B0BYZ9Y82S"
   },
   {
     id: 8,
@@ -109,7 +116,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Flipkart",
     image: gadgetImages[3],
     rating: 4.5,
-    category: "Laptops"
+    category: "Laptops",
+    dealUrl: sampleDealUrls["Flipkart"] + "dell-core-i9-13th-gen-32-gb-1-tb-ssd-windows-11-home-16-gb-graphics-nvidia-geforce-rtx-4070-xps-9530-thin-light-laptop/p/itm02ef6f6859130"
   },
   {
     id: 9,
@@ -119,7 +127,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[4],
     rating: 4.8,
-    category: "Tablets"
+    category: "Tablets",
+    dealUrl: sampleDealUrls["Amazon"] + "Apple-13-inch-iPad-Pro-Wi-Fi/dp/B0C71RJSKJ"
   },
   {
     id: 10,
@@ -129,7 +138,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Croma",
     image: gadgetImages[4],
     rating: 4.7,
-    category: "Tablets"
+    category: "Tablets",
+    dealUrl: sampleDealUrls["Croma"] + "apple-ipad-pro-m2-chip-13-inch-wifi-tablet-256gb-space-grey-/p/270396"
   },
   {
     id: 11,
@@ -139,7 +149,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[5],
     rating: 4.8,
-    category: "Headphones"
+    category: "Headphones",
+    dealUrl: sampleDealUrls["Amazon"] + "Sony-WH-1000XM5-Cancelling-Wireless-Headphones/dp/B09Y2MYL5C"
   },
   {
     id: 12,
@@ -149,7 +160,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Flipkart",
     image: gadgetImages[5],
     rating: 4.7,
-    category: "Headphones"
+    category: "Headphones",
+    dealUrl: sampleDealUrls["Flipkart"] + "sony-wh-1000xm5-bluetooth-headset/p/itm0493f288f9451"
   },
   {
     id: 13,
@@ -159,7 +171,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Amazon",
     image: gadgetImages[6],
     rating: 4.7,
-    category: "Smartwatches"
+    category: "Smartwatches",
+    dealUrl: sampleDealUrls["Amazon"] + "Apple-Watch-Series-GPS-Aluminium/dp/B0CHXC9PW4"
   },
   {
     id: 14,
@@ -169,7 +182,8 @@ export const mockGadgets: Gadget[] = [
     platform: "Reliance Digital",
     image: gadgetImages[6],
     rating: 4.6,
-    category: "Smartwatches"
+    category: "Smartwatches",
+    dealUrl: sampleDealUrls["Reliance Digital"] + "apple-watch-series-9-gps-45mm-aluminium-case-with-sport-band-smart-watch/p/493177711"
   },
   {
     id: 15,
@@ -180,7 +194,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[7],
     rating: 4.3,
     category: "Smartphones",
-    dealUrl: "https://www.flipkart.com/vivo-v30-pro"
+    dealUrl: sampleDealUrls["Flipkart"] + "vivo-v30-pro-5g-titanium-black-256-gb/p/itm4d7d5d7ea3d8c"
   },
   {
     id: 16,
@@ -191,7 +205,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[7],
     rating: 4.2,
     category: "Smartphones",
-    dealUrl: "https://www.amazon.in/vivo-V30-Pro"
+    dealUrl: sampleDealUrls["Amazon"] + "Vivo-V30-Pro-Titanium-Storage/dp/B0CQVN22P8"
   },
   {
     id: 17,
@@ -202,7 +216,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[8],
     rating: 4.4,
     category: "Smartwatches",
-    dealUrl: "https://www.amazon.in/noise-colorfit-ultra-3"
+    dealUrl: sampleDealUrls["Amazon"] + "Noise-ColorFit-Ultra-Bluetooth-Calling/dp/B0B5LC6FLK"
   },
   {
     id: 18,
@@ -213,7 +227,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[8],
     rating: 4.3,
     category: "Smartwatches",
-    dealUrl: "https://www.flipkart.com/noise-colorfit-ultra-3"
+    dealUrl: sampleDealUrls["Flipkart"] + "noise-colorfit-ultra-3-1-96-amoled-display-with-calling-always-s/p/itmfeb3bcfb241ce"
   },
   {
     id: 19,
@@ -224,7 +238,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[10],
     rating: 4.2,
     category: "Smartphones",
-    dealUrl: "https://www.amazon.in/OPPO-Reno-10-Pro"
+    dealUrl: sampleDealUrls["Amazon"] + "OPPO-Reno10-Silvery-Storage-Charging/dp/B07WGPKPT4"
   },
   {
     id: 20,
@@ -235,7 +249,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[10],
     rating: 4.1,
     category: "Smartphones",
-    dealUrl: "https://www.croma.com/oppo-reno-10-pro"
+    dealUrl: sampleDealUrls["Croma"] + "oppo-reno10-pro-5g-256-gb-rom-12-gb-ram-cpv2303-silvery-grey/p/270691"
   },
   {
     id: 21,
@@ -246,7 +260,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[5],
     rating: 4.3,
     category: "Headphones",
-    dealUrl: "https://www.amazon.in/boat-rockerz-550"
+    dealUrl: sampleDealUrls["Amazon"] + "Rockerz-550-Headphone-Recreated-Additional/dp/B0856HNMR7"
   },
   {
     id: 22,
@@ -257,7 +271,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[5],
     rating: 4.2,
     category: "Headphones",
-    dealUrl: "https://www.flipkart.com/boat-rockerz-550"
+    dealUrl: sampleDealUrls["Flipkart"] + "boat-rockerz-550-bluetooth-headset/p/itm8023685e7861f"
   },
   {
     id: 23,
@@ -268,7 +282,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[9],
     rating: 4.1,
     category: "Headphones",
-    dealUrl: "https://www.amazon.in/boat-airdopes-141"
+    dealUrl: sampleDealUrls["Amazon"] + "Airdopes-141-42H-Playtime-Resistance/dp/B09N3ZNHTY"
   },
   {
     id: 24,
@@ -279,7 +293,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[9],
     rating: 4.0,
     category: "Headphones",
-    dealUrl: "https://www.croma.com/boat-airdopes-141"
+    dealUrl: sampleDealUrls["Croma"] + "boat-airdopes-141-true-wireless-earbuds-with-mic-black/p/250300"
   },
   {
     id: 25,
@@ -290,7 +304,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[11],
     rating: 4.5,
     category: "Tablets",
-    dealUrl: "https://www.amazon.in/xiaomi-pad-6"
+    dealUrl: sampleDealUrls["Amazon"] + "Xiaomi-Pad-Qualcomm-Snapdragon-Dolby/dp/B0C794Y6NL"
   },
   {
     id: 26,
@@ -301,7 +315,7 @@ export const mockGadgets: Gadget[] = [
     image: gadgetImages[11],
     rating: 4.4,
     category: "Tablets",
-    dealUrl: "https://www.flipkart.com/xiaomi-pad-6"
+    dealUrl: sampleDealUrls["Flipkart"] + "xiaomi-pad-6-8-gb-ram-256-gb-rom-11-inch-with-wi-fi-only/p/itm2094ec0267507"
   }
 ];
 
