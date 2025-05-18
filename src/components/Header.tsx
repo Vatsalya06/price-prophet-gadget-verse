@@ -7,7 +7,11 @@ import { Button } from "@/components/ui/button";
 // Logo component
 const Logo = () => (
   <div className="flex items-center space-x-2">
-    <div className="h-8 w-8 rounded-full bg-gradient-to-r from-prophet-blue to-prophet-orange flex items-center justify-center text-white font-bold text-xl">P</div>
+    <img 
+      src="/lovable-uploads/ed4d73c7-fcf1-4f77-a7b8-1c643409f9cd.png"
+      alt="Price Prophet Logo"
+      className="h-10 w-10"
+    />
     <span className="text-2xl font-bold bg-gradient-to-r from-prophet-blue to-prophet-orange bg-clip-text text-transparent">
       Price Prophet
     </span>

@@ -1,20 +1,20 @@
+
 import { Gadget } from "@/components/GadgetCard";
 
-// Sample images for devices
+// Sample images for devices - using proper professional product images
 const gadgetImages = [
-  "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=2942&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2940&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1585362028213-d6631d873514?q=80&w=2788&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?q=80&w=2788&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=2564&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=2788&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?q=80&w=2874&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1606041008023-472dfb5b530f?q=80&w=2788&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?q=80&w=1978&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1564424224827-cd24b8915874?q=80&w=2289&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1578942759211-20c9c74aa4f7?q=80&w=2187&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=2267&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1563826904172-56d186eaa0d4?q=80&w=1974&auto=format&fit=crop"
+  "https://images.unsplash.com/photo-1606041008023-472dfb5b530f?q=80&w=2788&auto=format&fit=crop", // iPhone 15 Pro
+  "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?q=80&w=3540&auto=format&fit=crop", // Samsung Galaxy S24
+  "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2626&auto=format&fit=crop", // MacBook Pro
+  "https://images.unsplash.com/photo-1625242662167-9ba73d268139?q=80&w=2832&auto=format&fit=crop", // Dell XPS
+  "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=2935&auto=format&fit=crop", // iPad Pro
+  "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=2788&auto=format&fit=crop", // Sony Headphones
+  "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=3472&auto=format&fit=crop", // Apple Watch
+  "https://images.unsplash.com/photo-1678911820864-e2c567c655d7?q=80&w=3387&auto=format&fit=crop", // Vivo Phone
+  "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=2831&auto=format&fit=crop", // Smartwatch
+  "https://images.unsplash.com/photo-1564424224827-cd24b8915874?q=80&w=2289&auto=format&fit=crop", // Wireless earbuds
+  "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2865&auto=format&fit=crop", // OPPO Phone
+  "https://images.unsplash.com/photo-1609692814858-f7cd2f0afa4f?q=80&w=2787&auto=format&fit=crop"  // Xiaomi Tablet
 ];
 
 // Sample platforms
@@ -30,13 +30,13 @@ const sampleDealUrls = {
   "Tata Cliq": "https://www.tatacliq.com/product/p/8765"
 };
 
-// Sample gadget data
+// Sample gadget data with realistic current prices (May 2025)
 export const mockGadgets: Gadget[] = [
   {
     id: 1,
     name: "iPhone 15 Pro (256GB, Titanium Blue)",
     description: "6.1-inch Super Retina XDR display, A17 Pro chip, 48MP camera system, Titanium design",
-    price: 134900,
+    price: 132990,
     platform: "Amazon",
     image: gadgetImages[0],
     rating: 4.7,
@@ -56,7 +56,7 @@ export const mockGadgets: Gadget[] = [
     id: 3,
     name: "Samsung Galaxy S24 Ultra (512GB)",
     description: "6.8-inch Dynamic AMOLED display, Snapdragon 8 Gen 3, 200MP camera, S Pen included",
-    price: 129999,
+    price: 134990,
     platform: "Amazon",
     image: gadgetImages[1],
     rating: 4.5,
@@ -66,7 +66,7 @@ export const mockGadgets: Gadget[] = [
     id: 4,
     name: "Samsung Galaxy S24 Ultra (512GB)",
     description: "6.8-inch Dynamic AMOLED display, Snapdragon 8 Gen 3, 200MP camera, S Pen included",
-    price: 131999,
+    price: 136999,
     platform: "Croma",
     image: gadgetImages[1],
     rating: 4.4,
@@ -76,7 +76,7 @@ export const mockGadgets: Gadget[] = [
     id: 5,
     name: "MacBook Pro 14-inch M3 Pro",
     description: "14-inch Liquid Retina XDR display, M3 Pro chip, 16GB RAM, 512GB SSD",
-    price: 199900,
+    price: 169900,
     platform: "Amazon",
     image: gadgetImages[2],
     rating: 4.9,
@@ -86,7 +86,7 @@ export const mockGadgets: Gadget[] = [
     id: 6,
     name: "MacBook Pro 14-inch M3 Pro",
     description: "14-inch Liquid Retina XDR display, M3 Pro chip, 16GB RAM, 512GB SSD",
-    price: 198990,
+    price: 168990,
     platform: "Reliance Digital",
     image: gadgetImages[2],
     rating: 4.8,
@@ -96,7 +96,7 @@ export const mockGadgets: Gadget[] = [
     id: 7,
     name: "Dell XPS 15 (2024)",
     description: "15.6-inch 4K OLED touch display, Intel Core i9, 32GB RAM, 1TB SSD, NVIDIA RTX 4070",
-    price: 249999,
+    price: 229990,
     platform: "Amazon",
     image: gadgetImages[3],
     rating: 4.6,
@@ -106,7 +106,7 @@ export const mockGadgets: Gadget[] = [
     id: 8,
     name: "Dell XPS 15 (2024)",
     description: "15.6-inch 4K OLED touch display, Intel Core i9, 32GB RAM, 1TB SSD, NVIDIA RTX 4070",
-    price: 252999,
+    price: 232999,
     platform: "Flipkart",
     image: gadgetImages[3],
     rating: 4.5,
@@ -116,7 +116,7 @@ export const mockGadgets: Gadget[] = [
     id: 9,
     name: "iPad Pro 13-inch M2 (256GB, Wi-Fi)",
     description: "13-inch Liquid Retina XDR display, M2 chip, 256GB storage, Wi-Fi 6E",
-    price: 119900,
+    price: 104900,
     platform: "Amazon",
     image: gadgetImages[4],
     rating: 4.8,
@@ -126,7 +126,7 @@ export const mockGadgets: Gadget[] = [
     id: 10,
     name: "iPad Pro 13-inch M2 (256GB, Wi-Fi)",
     description: "13-inch Liquid Retina XDR display, M2 chip, 256GB storage, Wi-Fi 6E",
-    price: 118990,
+    price: 103990,
     platform: "Croma",
     image: gadgetImages[4],
     rating: 4.7,
@@ -136,7 +136,7 @@ export const mockGadgets: Gadget[] = [
     id: 11,
     name: "Sony WH-1000XM5 Noise Cancelling Headphones",
     description: "Industry-leading noise cancellation, 30-hour battery life, LDAC and DSEE Extreme",
-    price: 29990,
+    price: 26990,
     platform: "Amazon",
     image: gadgetImages[5],
     rating: 4.8,
@@ -146,7 +146,7 @@ export const mockGadgets: Gadget[] = [
     id: 12,
     name: "Sony WH-1000XM5 Noise Cancelling Headphones",
     description: "Industry-leading noise cancellation, 30-hour battery life, LDAC and DSEE Extreme",
-    price: 28999,
+    price: 25999,
     platform: "Flipkart",
     image: gadgetImages[5],
     rating: 4.7,
@@ -156,7 +156,7 @@ export const mockGadgets: Gadget[] = [
     id: 13,
     name: "Apple Watch Series 9 (GPS, 45mm)",
     description: "Always-On Retina display, S9 chip, Blood Oxygen and ECG apps, Crash Detection",
-    price: 45900,
+    price: 41900,
     platform: "Amazon",
     image: gadgetImages[6],
     rating: 4.7,
@@ -166,7 +166,7 @@ export const mockGadgets: Gadget[] = [
     id: 14,
     name: "Apple Watch Series 9 (GPS, 45mm)",
     description: "Always-On Retina display, S9 chip, Blood Oxygen and ECG apps, Crash Detection",
-    price: 44999,
+    price: 40999,
     platform: "Reliance Digital",
     image: gadgetImages[6],
     rating: 4.6,
@@ -176,7 +176,7 @@ export const mockGadgets: Gadget[] = [
     id: 15,
     name: "Vivo V30 Pro (256GB, Titanium Black)",
     description: "6.7-inch AMOLED display, MediaTek Dimensity 8200, 50MP camera system, 12GB RAM",
-    price: 47999,
+    price: 42999,
     platform: "Flipkart",
     image: gadgetImages[7],
     rating: 4.3,
@@ -187,7 +187,7 @@ export const mockGadgets: Gadget[] = [
     id: 16,
     name: "Vivo V30 Pro (256GB, Titanium Black)",
     description: "6.7-inch AMOLED display, MediaTek Dimensity 8200, 50MP camera system, 12GB RAM",
-    price: 46899,
+    price: 41899,
     platform: "Amazon",
     image: gadgetImages[7],
     rating: 4.2,
@@ -198,7 +198,7 @@ export const mockGadgets: Gadget[] = [
     id: 17,
     name: "Noise ColorFit Ultra 3 Smartwatch",
     description: "1.96-inch AMOLED display, IP67 water resistant, 100+ sports modes, 7-day battery life",
-    price: 4999,
+    price: 3499,
     platform: "Amazon",
     image: gadgetImages[8],
     rating: 4.4,
@@ -209,7 +209,7 @@ export const mockGadgets: Gadget[] = [
     id: 18,
     name: "Noise ColorFit Ultra 3 Smartwatch",
     description: "1.96-inch AMOLED display, IP67 water resistant, 100+ sports modes, 7-day battery life",
-    price: 4499,
+    price: 2999,
     platform: "Flipkart",
     image: gadgetImages[8],
     rating: 4.3,
@@ -220,9 +220,9 @@ export const mockGadgets: Gadget[] = [
     id: 19,
     name: "OPPO Reno 10 Pro (512GB, Cosmic Gray)",
     description: "6.7-inch AMOLED display, Snapdragon 778G, 50MP triple camera, 80W fast charging",
-    price: 39999,
+    price: 37999,
     platform: "Amazon",
-    image: gadgetImages[9],
+    image: gadgetImages[10],
     rating: 4.2,
     category: "Smartphones",
     dealUrl: "https://www.amazon.in/OPPO-Reno-10-Pro"
@@ -231,9 +231,9 @@ export const mockGadgets: Gadget[] = [
     id: 20,
     name: "OPPO Reno 10 Pro (512GB, Cosmic Gray)",
     description: "6.7-inch AMOLED display, Snapdragon 778G, 50MP triple camera, 80W fast charging",
-    price: 38999,
+    price: 36999,
     platform: "Croma",
-    image: gadgetImages[9],
+    image: gadgetImages[10],
     rating: 4.1,
     category: "Smartphones",
     dealUrl: "https://www.croma.com/oppo-reno-10-pro"
@@ -242,9 +242,9 @@ export const mockGadgets: Gadget[] = [
     id: 21,
     name: "boAt Rockerz 550 Bluetooth Headphones",
     description: "50mm drivers, 20 hours playback, physical noise isolation, soft padded ear cushions",
-    price: 1999,
+    price: 1499,
     platform: "Amazon",
-    image: gadgetImages[10],
+    image: gadgetImages[5],
     rating: 4.3,
     category: "Headphones",
     dealUrl: "https://www.amazon.in/boat-rockerz-550"
@@ -253,9 +253,9 @@ export const mockGadgets: Gadget[] = [
     id: 22,
     name: "boAt Rockerz 550 Bluetooth Headphones",
     description: "50mm drivers, 20 hours playback, physical noise isolation, soft padded ear cushions",
-    price: 1899,
+    price: 1399,
     platform: "Flipkart",
-    image: gadgetImages[10],
+    image: gadgetImages[5],
     rating: 4.2,
     category: "Headphones",
     dealUrl: "https://www.flipkart.com/boat-rockerz-550"
@@ -264,9 +264,9 @@ export const mockGadgets: Gadget[] = [
     id: 23,
     name: "boAt Airdopes 141 TWS Earbuds",
     description: "42 hours playback, BEAST mode for gaming, IPX4 water resistance, Type-C charging",
-    price: 1499,
+    price: 1099,
     platform: "Amazon",
-    image: gadgetImages[11],
+    image: gadgetImages[9],
     rating: 4.1,
     category: "Headphones",
     dealUrl: "https://www.amazon.in/boat-airdopes-141"
@@ -275,9 +275,9 @@ export const mockGadgets: Gadget[] = [
     id: 24,
     name: "boAt Airdopes 141 TWS Earbuds",
     description: "42 hours playback, BEAST mode for gaming, IPX4 water resistance, Type-C charging",
-    price: 1399,
+    price: 999,
     platform: "Croma",
-    image: gadgetImages[11],
+    image: gadgetImages[9],
     rating: 4.0,
     category: "Headphones",
     dealUrl: "https://www.croma.com/boat-airdopes-141"
@@ -286,9 +286,9 @@ export const mockGadgets: Gadget[] = [
     id: 25,
     name: "Xiaomi Pad 6 (8GB+256GB)",
     description: "11-inch 2.8K display, Snapdragon 870, Quad speakers, 8840mAh battery, 33W charging",
-    price: 29999,
+    price: 26999,
     platform: "Amazon",
-    image: gadgetImages[12],
+    image: gadgetImages[11],
     rating: 4.5,
     category: "Tablets",
     dealUrl: "https://www.amazon.in/xiaomi-pad-6"
@@ -297,9 +297,9 @@ export const mockGadgets: Gadget[] = [
     id: 26,
     name: "Xiaomi Pad 6 (8GB+256GB)",
     description: "11-inch 2.8K display, Snapdragon 870, Quad speakers, 8840mAh battery, 33W charging",
-    price: 28999,
+    price: 25999,
     platform: "Flipkart",
-    image: gadgetImages[12],
+    image: gadgetImages[11],
     rating: 4.4,
     category: "Tablets",
     dealUrl: "https://www.flipkart.com/xiaomi-pad-6"
