@@ -11,6 +11,7 @@ const Home = () => {
   const [filteredGadgets, setFilteredGadgets] = useState<Gadget[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
@@ -34,32 +35,32 @@ const Home = () => {
     loadGadgets();
   }, []);
 
-  const handleSearch = (query: string) => {
-    setSearchQuery(query);
+  useEffect(() => {
+    // Filter gadgets based on both search query and selected category
+    let filtered = [...gadgets];
     
-    if (!query.trim()) {
-      setFilteredGadgets(gadgets);
-      return;
+    if (searchQuery.trim()) {
+      const lowerCaseQuery = searchQuery.toLowerCase();
+      filtered = filtered.filter(gadget => 
+        gadget.name.toLowerCase().includes(lowerCaseQuery) ||
+        gadget.description.toLowerCase().includes(lowerCaseQuery) ||
+        gadget.category.toLowerCase().includes(lowerCaseQuery)
+      );
     }
     
-    const lowerCaseQuery = query.toLowerCase();
-    const filtered = gadgets.filter(gadget => 
-      gadget.name.toLowerCase().includes(lowerCaseQuery) ||
-      gadget.description.toLowerCase().includes(lowerCaseQuery) ||
-      gadget.category.toLowerCase().includes(lowerCaseQuery)
-    );
+    if (selectedCategory) {
+      filtered = filtered.filter(gadget => gadget.category === selectedCategory);
+    }
     
     setFilteredGadgets(filtered);
+  }, [searchQuery, selectedCategory, gadgets]);
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
   };
 
   const handleCategoryFilter = (category: string) => {
-    if (!category) {
-      setFilteredGadgets(gadgets);
-      return;
-    }
-    
-    const filtered = gadgets.filter(gadget => gadget.category === category);
-    setFilteredGadgets(filtered);
+    setSelectedCategory(category === selectedCategory ? "" : category);
   };
 
   return (
@@ -78,8 +79,8 @@ const Home = () => {
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           <Badge 
             variant="outline" 
-            className={`px-4 py-1.5 cursor-pointer ${!searchQuery ? 'bg-prophet-blue text-white' : ''}`}
-            onClick={() => handleSearch("")}
+            className={`px-4 py-1.5 cursor-pointer ${!selectedCategory ? 'bg-prophet-blue text-white' : ''}`}
+            onClick={() => handleCategoryFilter("")}
           >
             All
           </Badge>
@@ -87,7 +88,7 @@ const Home = () => {
             <Badge
               key={category}
               variant="outline"
-              className={`px-4 py-1.5 cursor-pointer ${searchQuery === category ? 'bg-prophet-blue text-white' : ''}`}
+              className={`px-4 py-1.5 cursor-pointer ${selectedCategory === category ? 'bg-prophet-blue text-white' : ''}`}
               onClick={() => handleCategoryFilter(category)}
             >
               {category}

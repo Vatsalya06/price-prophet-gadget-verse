@@ -1,4 +1,3 @@
-
 import { Gadget } from "@/components/GadgetCard";
 
 // Sample images for devices - using proper professional product images
@@ -6,7 +5,7 @@ const gadgetImages = [
   "https://images.unsplash.com/photo-1606041008023-472dfb5b530f?q=80&w=2788&auto=format&fit=crop", // iPhone 15 Pro
   "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?q=80&w=3540&auto=format&fit=crop", // Samsung Galaxy S24
   "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2626&auto=format&fit=crop", // MacBook Pro
-  "https://images.unsplash.com/photo-1625242662167-9ba73d268139?q=80&w=2832&auto=format&fit=crop", // Dell XPS
+  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=6000&auto=format&fit=crop", // Dell XPS - Updated to a better image
   "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=2935&auto=format&fit=crop", // iPad Pro
   "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=2788&auto=format&fit=crop", // Sony Headphones
   "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=3472&auto=format&fit=crop", // Apple Watch
